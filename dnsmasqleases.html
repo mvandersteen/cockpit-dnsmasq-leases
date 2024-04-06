@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Access Point Connections</title>
+    <meta charset="utf-8">
+    <link href="dnsmasqleases.css" type="text/css" rel="stylesheet">
+    <script src="../base1/cockpit.js"></script>
+</head>
+<body class="pf-m-redhat-font">
+<div class="ct-page-fill" id="app">
+  <div class="pf-c-page">
+    <main class="pf-c-page__main" tabindex="-1">
+     <section class="pf-c-page__main-section">
+      <div class="pf-l-gallery pf-m-gutter">
+	<article id="access-point-connections" class="pf-c-card pf-m-light" data-ouia-component-type="PF4/Card" data-ouia-safe="true" data-ouia-component-id="OUIA-Generated-Card-1">
+		<div class="pf-c-card__header">
+			<div class="pf-c-card__title">
+				<h2 data-pf-content="true" class="">Access Point Connections</h2>
+			</div>
+		</div>
+		<div class="pf-c-card__actions">
+			<button id="ap-connections-refresh" aria-disabled="false" class="pf-c-button pf-m-secondary" type="button">Refresh</button>
+		</div>
+		<table id="results" aria-label="Access Point Connections" role="grid" class="ct-table pf-c-table pf-m-grid-md pf-m-compact">
+			<thead class="">
+				<tr class="">
+					<th scope="col" class="pf-m-width-25">DNS Name</th>
+					<th scope="col" class="pf-m-width-25">IP address</th>
+					<th scope="col" class="pf-m-width-25">mAC Address</th>
+					<th scope="col" class="pf-m-width-25">Lease Expires</th>
+				</tr>
+			</thead>
+			<tbody role="rowgroup" class="">
+				<tr class="">
+					<th data-label="DnsName" scope="col" class="">${dnsName}</th>
+					<td data-label="IP address" class="">${ipAddr}</td>
+					<td data-label="mAC Address" class="">${macAddr}</td>
+					<td data-label="Lease Expires" class="">${date}</td>
+				</tr>
+			</tbody>
+		</table>
+		<div><span id="result"></span></div>
+	</article>
+      </div>
+     </section>
+    </main>
+  </div>
+</div>
+    <script src="dnsmasqleases.js"></script>
+</body>
+</html>
